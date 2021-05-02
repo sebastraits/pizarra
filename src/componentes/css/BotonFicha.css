@@ -1,0 +1,23 @@
+.BotonFicha {
+  width: 45px;
+  height: 45px;
+  background-color: #efff0e;
+  margin: 5px;
+  padding: 10px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  font-size: 11px;
+  line-height: 32px;
+  text-transform: uppercase;
+  float: left;
+  color: rgb(0, 0, 0);
+  position: fixed;
+  top: 20%;
+  left: 20%;
+}
+.boton:hover {
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha (opacity=50);
+}

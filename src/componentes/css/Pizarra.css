@@ -1,0 +1,24 @@
+.ImagenPizarraGrande {
+  height: 75vh;
+}
+
+.divPizarra {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  /* width: 80%;
+  height: 500px ; */
+  background-color: aqua;
+  /* background-image: url("../imagenes/pizarra.jpg"); */
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat ;
+  background-size: auto;
+}
+
+.ImagenPizarraChica {
+  height: 75vh;
+}
