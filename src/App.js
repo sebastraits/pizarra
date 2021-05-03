@@ -1,38 +1,45 @@
-import { makeStyles } from "@material-ui/core";
+import {
+  FormControlLabel,
+  FormLabel,
+  Grid,
+  makeStyles,
+  Paper,
+  RadioGroup,
+} from "@material-ui/core";
 import "./App.css";
 import React, { useEffect, useRef, useState } from "react";
-import Fichas from "./componentes/fichas";
+import Field from "./componentes/field";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 600,
-    Height: "600px",
+    flexGrow: 1,
   },
-  media: {
+  paper: {
     height: 140,
+    width: 100,
   },
-});
+  control: {
+    padding: theme.spacing(2),
+  },
+}));
 
 function App() {
-  const [tamPizarra, setTamPizarra] = useState([])
   const classes = useStyles();
-  const inputRef = useRef();
-
-  useEffect(() => {
-  let style = getComputedStyle(inputRef.current);
-  setTamPizarra([parseInt(style.width), parseInt(style.height)])
-  },[inputRef])
-
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <div ref={inputRef} id="terrenoJuego" className="contenedorTerreno">
-          <img className="terrenoJuego" src="img/pizarra.jpg" alt="terreno" />
-          <Fichas tamPizarra={tamPizarra}></Fichas>
-       
-        </div>
-      </header>
-    </div>
+    <>
+      <Grid container className={classes.root} spacing={2}>
+        <Grid item xs={12}>
+          <Grid container justify="center" spacing="2">
+            <Grid key="0" item></Grid>
+            <Grid key="1" item>
+              <Field></Field>
+            </Grid>
+            <Grid key="2" item></Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+    </>
   );
 }
 
