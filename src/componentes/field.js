@@ -8,16 +8,7 @@ function Field(props) {
     function actualizar() {
         let style = getComputedStyle(inputRef.current);
         setTamPizarra([parseInt(style.width), parseInt(style.height)]);
-        // console.log(tamPizarra)
-      }
-
-    // useEffect(() => {
-    //     if (inputRef) {
-    //       let style = getComputedStyle(inputRef.current);
-    //       setTamPizarra([parseInt(style.width), parseInt(style.height)]);
-          
-    //     }
-    //   }, []);
+       
 
   return (
     <div
