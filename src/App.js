@@ -1,13 +1,10 @@
 import {
-  FormControlLabel,
-  FormLabel,
-  Grid,
+   Grid,
   makeStyles,
-  Paper,
-  RadioGroup,
+   
 } from "@material-ui/core";
 import "./App.css";
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Field from "./componentes/field";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  
+ 
   return (
     <>
       <Grid container className={classes.root} spacing={2}>
